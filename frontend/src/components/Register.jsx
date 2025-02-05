@@ -20,7 +20,7 @@ function Register() {
       localStorage.setItem("authToken", JSON.stringify(result.data.token));
     } catch (error) {
       console.log(error);
-      setError({ message: error });
+      setError({ message: error?.response?.data?.message });
     }
   };
   return (
